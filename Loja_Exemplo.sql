@@ -28,3 +28,18 @@ CREATE TABLE pedidos (
     id_cliente INT,
     FOREIGN KEY (id_cliente) REFERENCES clientes(id_cliente)
 );
+INSERT INTO clientes (nome, email, telefone, data_cadastro, cpf)
+VALUES
+('Maria Silva', 'maria@gmail.com', '19999999999', '2026-10-01', '111.111.111-11'),
+('João Santos', 'joao@gmail.com', '19888888888', '2026-10-02', '222.222.222-22'),
+('Ana Souza', 'ana@gmail.com', '19777777777', '2026-10-03', '333.333.333-33');
+
+INSERT INTO pedidos (data_pedido, valor_total, id_cliente)
+VALUES
+('2026-10-01', 150.00, 1),
+('2026-10-02', 250.50, 2),
+('2026-10-03', 99.90, 3);
+
+SELECT * FROM clientes;
+
+SELECT * FROM pedidos;
